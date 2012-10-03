@@ -188,32 +188,6 @@
                                 <tr><td><a href="http://www.transparency.org/cpi2011">Corruption Perceptions Index 2011</a></td><td><a href="http://files.transparency.org/content/download/313/1264/file/CPI2011_DataPackage.zip">http://files.transparency.org/content/download/313/1264/file/CPI2011_DataPackage.zip</a></td></tr>
                             </tbody>
                         </table>
-
-
-
-                        <h2 id="application">Application</h2>
-                        <p>The application for the the WBLD is viewed in the form of chart visualizations. A custom API is built to pull the necessary data out of the application. The parameters for the API are:</p>
-                        <ul>
-                            <li><code>indicator</code>, which accepts a single indicator code (<code>skos:notation</code> of the indicator URI)</li>
-                            <li><code>country</code>, which accepts multiple country codes (<code>skos:notation</code> of the country URI)</li>
-                            <li><code>year</code>, which accepts a year in YYYY format</li>
-                        </ul>
-
-                        <p>The <code>indicator</code> parameter is a required as one of the dimensions in the observation needs to be known. The other required dimension is either <code>country</code> or <code>year</code>.</p>
-
-                        <p>Two API calls are made due to modular design approach; the first call is made to get the metadata about the indicator, whereas the second call is made to collect either all of the observations for the countries with that indicator, or all of the observations for a given reference period with that indicator. The response data from the API is requested in JSON format in order to pass it on to JavaScript library which handles the visualizations.</p>
-
-                        <h3 id="chart-visualization">Chart visualizations</h3>
-                        <p>The <a href="http://transparency.270a.info/view">Tools</a> section on the site uses <a href="https://google-developers.appspot.com/chart/">Google Charts Tools</a> to create the visualizations.</p>
-
-                        <h4 id="visualization_world-development-indicators">Visualizing World Development Indicators</h4>
-                        <p>Depending on the user selections, and the corresponding API call, two possible charts are generated:</p>
-
-                        <h5 id="visualization_world-development-indicators_motion-chart">Motion chart</h5>
-                        <p>It consists of three different views; a bubble chart, bar chart, and line chart. This chart is intended for observation values in countries, over a time period for an indicator. Unique colours are assigned to each country to easily visually separate them from one another. The reference period runs on the x-axis, whereas the measured values run on the y-axis.</p>
-
-                        <h5 id="visualization_world-development-indicators_geo-chart">Geo chart</h5>
-                        <p>It consists of a world map view where countries are separated by their official borders. This chart is used to view observation values for a time period for all the countries in the world. The legend consists in the form of a colour spectrum from lowest to highest measured values. The corresponding colours are assigned to each country on the map.</p>
                     </div>
                 </div>
 
@@ -221,7 +195,7 @@
                     <dt>Page notice</dt>
                     <dd>
                         <ul>
-                            <li class="notice_updated">Last updated on 2012-08-10.</li>
+                            <li class="notice_updated">Last updated on 2012-10-03.</li>
                         </ul>
                     </dd>
                 </dl>
