@@ -38,7 +38,7 @@
         <link rel="shortcut icon" href="<?php echo $favicon; ?>"/>
         <link rel="stylesheet" type="text/css" href="<?php echo $c['site']['base'].'/theme/'.$c['site']['theme'].'/css/display.css?'.$fileVersion; ?>" media="all"/>
 
-        <meta name="description" content="World Bank data published using the Linked Data design principles. It contains World Development Indicators, World Bank Finances, World Bank Projects and Operations, and World Bank Climate Change data."/>
+        <meta name="description" content="Transparency International data published using the Linked Data design principles. It contains Corruption Perceptions Index and Sources data."/>
         <meta name="author" content="http://csarven.ca/#i"/>
     </head>
 
@@ -52,13 +52,13 @@
 
                     <div id="content_inner">
                         <div class="entry-content">
-                            <p>This site contains The World Bank data published using the Linked Data design principles. There is an in-depth explanation <a href="/about">about</a> this site. Or check these out to get a quick feel for what's here and some of the things you can find out:</p>
+                            <p>This site contains Transparency International data published using the Linked Data design principles. There is an in-depth explanation <a href="/about">about</a> this site. Or check these out to get a quick feel for what's here and some of the things you can find out:</p>
 
                             <ul>
                                 <li>O <a href="http://transparency.270a.info/classification/country/CA">Canada</a>! 
-(links to Transparency International Linked Data and DBpedia).</li>
+(links to World Bank Linked Data, Eurostat Linked Data, and DBpedia).</li>
                                 <li><a href="http://transparency.270a.info/dataset">Transparency International datasets (Corruption Perception Index and original Sources)</a>.</li>
-                                <li><a href="http://transparency.270a.info/dataset/world-bank-climates">World Bank Climate Change</a> observations</li>
+                                <li><a href="http://transparency.270a.info/sparql?query=PREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0D%0APREFIX+sdmx-dimension%3A+%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23%3E%0D%0APREFIX+year%3A+%3Chttp%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F%3E%0D%0APREFIX+property%3A+%3Chttp%3A%2F%2Ftransparency.270a.info%2Fproperty%2F%3E%0D%0A%0D%0ASELECT+%3Frank+%3FcountryLabel%0D%0AWHERE+%7B%0D%0A%3Fs+sdmx-dimension%3ArefPeriod+year%3A2011+%3B%0D%0A+++property%3Arank+%3Frank+%3B%0D%0A+++sdmx-dimension%3ArefArea+%3FcountryURI+%3B%0D%0A+++.%0D%0A%3FcountryURI+skos%3AprefLabel+%3FcountryLabel+.%0D%0A%7D%0D%0AORDER+BY+%3Frank&default-graph-uri=&output=xml&stylesheet=%2Fxml-to-html.xsl">Query result for Corruption Perceptions Index 2011 country ranking</a></li>
                             </ul>
                         </div>
                     </div>
