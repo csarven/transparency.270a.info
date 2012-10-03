@@ -1,0 +1,81 @@
+<?php
+    $resource_uri = $this->desc->get_primary_resource_uri();
+    $title = $this->get_title($resource_uri);
+
+    $sC = $this->sC;
+    $c  = $sC->getConfig();
+
+    $entitySetId = $sC->getEntitySetId();
+
+    echo '<?xml version="1.0" encoding="utf-8"?>'."\n";
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:xsd ="http://www.w3.org/2001/XMLSchema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"  
+  xmlns:doap="http://usefulinc.com/ns/doap#"
+  xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+    <head>
+        <title><?php echo $c['site']['name'];?></title>
+<?php
+    $fileVersion = 'version=0.0.2';
+
+    $favicon_theme = SITE_DIR.'theme/'.$c['site']['theme'].'/images/icons/favicon.ico';
+
+    if (file_exists($favicon_theme)) {
+        $favicon = $c['site']['base'].'/theme/'.$c['site']['theme'].'/images/icons/favicon.ico';
+    }
+    else {
+        $favicon = $c['site']['base'].'/favicon.ico';
+    }
+?>
+
+        <link rel="shortcut icon" href="<?php echo $favicon; ?>"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo $c['site']['base'].'/theme/'.$c['site']['theme'].'/css/display.css?'.$fileVersion; ?>" media="all"/>
+
+        <meta name="description" content="World Bank data published using the Linked Data design principles. It contains World Development Indicators, World Bank Finances, World Bank Projects and Operations, and World Bank Climate Change data."/>
+        <meta name="author" content="http://csarven.ca/#i"/>
+    </head>
+
+    <body id="<?php echo $entitySetId; ?>">
+        <div id="wrap">
+<?php require_once SITE_DIR . 'templates/header.html'; ?>
+            <div id="core">
+
+                <div id="content">
+                    <h1>Transparency International Linked Data</h1>
+
+                    <div id="content_inner">
+                        <div class="entry-content">
+                            <p>This site contains The World Bank data published using the Linked Data design principles. There is an in-depth explanation <a href="/about">about</a> this site. Or check these out to get a quick feel for what's here and some of the things you can find out:</p>
+
+                            <ul>
+                                <li>O <a href="http://transparency.270a.info/classification/country/CA">Canada</a>! 
+(links to Transparency International Linked Data and DBpedia).</li>
+                                <li><a href="http://transparency.270a.info/dataset">Transparency International datasets (Corruption Perception Index and original Sources)</a>.</li>
+                                <li><a href="http://transparency.270a.info/dataset/world-bank-climates">World Bank Climate Change</a> observations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <dl id="page_notice">
+                    <dt>Page notice</dt>
+                    <dd>
+                        <ul>
+                            <li class="notice_updated">Last updated on 2012-10-03.</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+
+            <div id="footer">
+            </div>
+
+        </div>
+<?php require_once SITE_DIR . 'templates/foot.html'; ?>
