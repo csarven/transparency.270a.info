@@ -124,7 +124,7 @@
                             <p>Good news everyone! No blank nodes in data. Only a few due to the DataStructureDefinition (DSD) from RDF Data Cube.</p>
 
                             <h4 id="data-modeling_normalization">Normalization</h4>
-                            <p>None.</p>
+                            <p>Trimmed whitespace at start and end of strings.</p>
 
                             <h3 id="data-provenance">Data provenance</h3>
                             <p>As part of data enrichment, triples pertaining provenance was added in order to partially provide extra metadata about the data. For the datasets and observations in these datasets, they address the following information:</p>
@@ -147,9 +147,9 @@
                             <h3 id="uri-patterns">URI patterns</h3>
                             <dl>
                                 <dt>Classifications</dt>
-                                <dd><code>http://transparency.270a.info/classification/{id}</code>, where id is one of; <a href="/classification/country">country</a>, <a href="/classification/source">source</a>, <a href="/classification/attribute">attribute</a>.</dd>
+                                <dd><code>http://transparency.270a.info/classification/{id}</code>, where id is one of; <a href="/classification/country">country</a>, <a href="/classification/source">source</a>, <a href="/classification/indicator">indicator</a>, <a href="/classification/attribute">attribute</a>.</dd>
                                 <dt>Properties</dt>
-                                <dd><code>http://transparency.270a.info/property/{id}</code>, <a href="/property/percentile-90-lower">percentile-90-lower</a>, <a href="/property/percentile-90-upper">percentile-90-upper</a>, <a href="/property/rank">rank</a>, <a href="/property/score">score</a>, <a href="/property/source">source</a>, <a href="/property/surveys-used"></a></dd>
+                                <dd><code>http://transparency.270a.info/property/{id}</code>, <a href="/property/percentile-90-lower">percentile-90-lower</a>, <a href="/property/percentile-90-upper">percentile-90-upper</a>, <a href="/property/rank">rank</a>, <a href="/property/score">score</a>, <a href="/property/source">source</a>, <a href="/property/indicator">indicator</a>, <a href="/property/surveys-used">surveys-used</a></dd>
                                 <dt>Data Cube datasets</dt>
                                 <dd><code>http://transparency.270a.info/dataset/{id}</code>, where id is one of; <a href="/dataset/corruption-perceptions-index">corruption-perceptions-index</a>, <a href="/dataset/sources">sources</a>.</dd>
                                 <dt>Named graphs in RDF store</dt>
