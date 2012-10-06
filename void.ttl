@@ -28,12 +28,12 @@
     dcterms:source [ foaf:homepage <http://transparency.org/> ] ;
     dcterms:publisher [ foaf:homepage <http://csarven.ca/> ] ;
     dcterms:created "2012-09-24"^^xsd:date ;
-    dcterms:modified "2012-10-03"^^xsd:date ;
+    dcterms:modified "2012-10-6"^^xsd:date ;
     void:subset
         :VoID ,
         :meta ,
         :corruption-perceptions-index ;
-    void:triples 41429 ;
+    void:triples 42044 ;
     dcterms:subject
         <http://dbpedia.org/resource/Transparency_International> ,
         <http://dbpedia.org/resource/Non-governmental_organization> ,
@@ -59,7 +59,7 @@
 :VoID
     a sd:Graph, void:Dataset ;
     dcterms:title "SD+VoID triples"@en ;
-    void:triples 1546 ;
+    void:triples 460 ;
     void:dataDump <http://transparency.270a.info/void.ttl> ;
     .
 
@@ -70,7 +70,7 @@
     dcterms:source [ foaf:homepage <http://cpi.transparency.org/> ] ;
     dcterms:publisher [ foaf:homepage <http://csarven.ca/> ] ;
     dcterms:created "2012-09-24"^^xsd:date ;
-    dcterms:modified "2012-10-03"^^xsd:date ;
+    dcterms:modified "2012-10-06"^^xsd:date ;
     void:dataDump <http://transparency.270a.info/data/meta.tar.gz> ;
     void:exampleResource
         <http://transparency.270a.info/classification/country/CA> ,
@@ -82,40 +82,40 @@
         void:entities 183
     ], [
         void:class qb:DimensionProperty ;
-        void:entities 1
+        void:entities 2
     ], [
         void:class qb:MeasureProperty ;
         void:entities 2
     ], [
         void:class <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-        void:entities 2
+        void:entities 4
     ], [
         void:class qb:ComponentSpecification ;
-        void:entities 7
+        void:entities 8
     ], [
         void:class <http://www.w3.org/2004/02/skos/core#Concept> ;
-        void:entities 234
+        void:entities 235
     ], [
         void:class qb:DataStructureDefinition ;
         void:entities 4
     ], [
         void:class rdf:Property ;
-        void:entities 6
+        void:entities 7
     ], [
         void:class qb:DataSet ;
         void:entities 4
     ] ;
     void:classes 9 ;
-    void:entities 261 ;
+    void:entities 266 ;
     void:observation [
         xstats:schema <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
         xstats:subjectsOfType rdf:type ;
-        xstats:value 443 ;
+        xstats:value 449 ;
         a qb:Observation
     ], [
         xstats:schema <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
         xstats:subjectsOfType rdf:Property ;
-        xstats:value 6 ;
+        xstats:value 7 ;
         a qb:Observation
     ], [
         xstats:schema <http://www.w3.org/2000/01/rdf-schema#> ;
@@ -140,7 +140,7 @@
     ], [
         xstats:schema <http://www.w3.org/2000/01/rdf-schema#> ;
         xstats:subjectsOfType <http://www.w3.org/2000/01/rdf-schema#label> ;
-        xstats:value 14 ;
+        xstats:value 15 ;
         a qb:Observation
     ], [
         xstats:schema <http://www.w3.org/2002/07/owl> ;
@@ -170,20 +170,20 @@
         void:property <http://www.w3.org/2004/02/skos/core#closeMatch> ;
         void:triples 1
     ], [
-        void:distinctObjects 3 ;
-        void:distinctSubjects 198 ;
+        void:distinctObjects 4 ;
+        void:distinctSubjects 199 ;
         void:property <http://www.w3.org/2004/02/skos/core#topConceptOf> ;
-        void:triples 198
+        void:triples 199
     ], [
         void:distinctObjects 4 ;
         void:distinctSubjects 4 ;
         void:property qb:structure ;
         void:triples 4
     ], [
-        void:distinctObjects 3 ;
-        void:distinctSubjects 3 ;
+        void:distinctObjects 4 ;
+        void:distinctSubjects 4 ;
         void:property qb:dimension ;
-        void:triples 3
+        void:triples 4
     ], [
         void:distinctObjects 3 ;
         void:distinctSubjects 3 ;
@@ -201,14 +201,14 @@
         void:triples 183
     ], [
         void:distinctObjects 9 ;
-        void:distinctSubjects 257 ;
+        void:distinctSubjects 262 ;
         void:property rdf:type ;
-        void:triples 243
+        void:triples 253
     ], [
-        void:distinctObjects 14 ;
-        void:distinctSubjects 14 ;
+        void:distinctObjects 15 ;
+        void:distinctSubjects 15 ;
         void:property <http://www.w3.org/2000/01/rdf-schema#label> ;
-        void:triples 14
+        void:triples 15
     ], [
         void:distinctObjects 183 ;
         void:distinctSubjects 183 ;
@@ -230,10 +230,10 @@
         void:property <http://www.w3.org/2000/01/rdf-schema#range> ;
         void:triples 5
     ], [
-        void:distinctObjects 3 ;
-        void:distinctSubjects 198 ;
+        void:distinctObjects 4 ;
+        void:distinctSubjects 199 ;
         void:property <http://www.w3.org/2004/02/skos/core#inScheme> ;
-        void:triples 198
+        void:triples 199
     ], [
         void:distinctObjects 7 ;
         void:distinctSubjects 2 ;
@@ -245,10 +245,10 @@
         void:property <http://purl.org/dc/terms/hasPart> ;
         void:triples 5
     ], [
-        void:distinctObjects 200 ;
-        void:distinctSubjects 200 ;
+        void:distinctObjects 203 ;
+        void:distinctSubjects 203 ;
         void:property <http://www.w3.org/2004/02/skos/core#prefLabel> ;
-        void:triples 200
+        void:triples 203
     ], [
         void:distinctObjects 2 ;
         void:distinctSubjects 2 ;
@@ -270,10 +270,10 @@
         void:property <http://www.w3.org/2004/02/skos/core#narrower> ;
         void:triples 36
     ], [
-        void:distinctObjects 2 ;
-        void:distinctSubjects 2 ;
+        void:distinctObjects 3 ;
+        void:distinctSubjects 3 ;
         void:property <http://www.w3.org/2004/02/skos/core#definition> ;
-        void:triples 2
+        void:triples 3
     ], [
         void:distinctObjects 1 ;
         void:distinctSubjects 186 ;
@@ -290,27 +290,27 @@
         void:property <http://www.w3.org/2000/01/rdf-schema#comment> ;
         void:triples 1
     ], [
-        void:distinctObjects 197 ;
-        void:distinctSubjects 2 ;
+        void:distinctObjects 199 ;
+        void:distinctSubjects 4 ;
         void:property <http://www.w3.org/2004/02/skos/core#hasTopConcept> ;
-        void:triples 197
+        void:triples 199
     ], [
         void:distinctObjects 14 ;
         void:distinctSubjects 36 ;
         void:property <http://www.w3.org/2004/02/skos/core#broader> ;
         void:triples 36
     ], [
-    void:distinctObjects 7 ;
+        void:distinctObjects 8 ;
         void:distinctSubjects 4 ;
         void:property qb:component ;
-        void:triples 23
+        void:triples 26
     ], [
         void:distinctObjects 731 ;
         void:distinctSubjects 183 ;
         void:property <http://www.w3.org/2002/07/owl#sameAs> ;
         void:triples 731
     ] ;
-    void:triples 2874 ;
+    void:triples 2893 ;
     void:vocabulary <http://purl.org/dc/terms/>, <http://purl.org/linked-data/cube>, <http://www.w3.org/1999/02/22-rdf-syntax-ns>, <http://www.w3.org/2000/01/rdf-schema>, <http://www.w3.org/2002/07/owl>, <http://www.w3.org/2004/02/skos/core>, <http://xmlns.com/foaf/0.1/> ;
     .
 
@@ -320,7 +320,7 @@
     dcterms:source [ foaf:homepage <http://cpi.transparency.org/> ] ;
     dcterms:publisher [ foaf:homepage <http://csarven.ca/> ] ;
     dcterms:created "2012-09-24"^^xsd:date ;
-    dcterms:modified "2012-10-03"^^xsd:date ;
+    dcterms:modified "2012-10-06"^^xsd:date ;
     void:dataDump <http://transparency.270a.info/data/corruption-perceptions-index.tar.gz> ;
     void:exampleResource
         <http://transparency.270a.info/dataset/corruption-perceptions-index/2011/CA> ,
@@ -342,17 +342,22 @@
         xstats:value 3928 ;
         a qb:Observation
     ] ;
-    void:properties 15 ;
+    void:properties 16 ;
     void:propertyPartition [
+        void:distinctObjects 116 ;
+        void:distinctSubjects 541 ;
+        void:property <http://transparency.270a.info/property/rank> ;
+        void:triples 541
+    ], [
         void:distinctObjects 36 ;
         void:distinctSubjects 2843 ;
         void:property <http://transparency.270a.info/property/source> ;
         void:triples 2843
     ], [
-        void:distinctObjects 2864 ;
-        void:distinctSubjects 2674 ;
-        void:property <http://purl.org/dc/terms/source> ;
-        void:triples 5578
+        void:distinctObjects 1 ;
+        void:distinctSubjects 541 ;
+        void:property <http://transparency.270a.info/property/indicator> ;
+        void:triples 541
     ], [
         void:distinctObjects 265 ;
         void:distinctSubjects 541 ;
@@ -374,7 +379,7 @@
         void:property <http://www.w3.org/2000/01/rdf-schema#label> ;
         void:triples 3511
     ], [
-        void:distinctObjects 2 ;
+        void:distinctObjects 4 ;
         void:distinctSubjects 3384 ;
         void:property qb:dataSet ;
         void:triples 3384
@@ -382,7 +387,7 @@
         void:distinctObjects 1 ;
         void:distinctSubjects 3384 ;
         void:property rdf:type ;
-        void:triples 1909
+        void:triples 1900
     ], [
         void:distinctObjects 5 ;
         void:distinctSubjects 3384 ;
@@ -399,6 +404,11 @@
         void:property <http://purl.org/linked-data/sdmx/2009/attribute#adjustment> ;
         void:triples 2843
     ], [
+        void:distinctObjects 2864 ;
+        void:distinctSubjects 2674 ;
+        void:property <http://purl.org/dc/terms/source> ;
+        void:triples 5578
+    ], [
         void:distinctObjects 529 ;
         void:distinctSubjects 2674 ;
         void:property <http://transparency.270a.info/property/score> ;
@@ -413,13 +423,8 @@
         void:distinctSubjects 361 ;
         void:property <http://qudt.org/1.1/schema/qudt#standardUncertainty> ;
         void:triples 361
-    ], [
-        void:distinctObjects 116 ;
-        void:distinctSubjects 541 ;
-        void:property <http://transparency.270a.info/property/rank> ;
-        void:triples 541
     ] ;
-    void:triples 38100 ;
+    void:triples 38641 ;
     void:vocabulary <http://purl.org/dc/terms/>, <http://purl.org/linked-data/cube>, <http://purl.org/linked-data/sdmx/2009/attribute>, <http://purl.org/linked-data/sdmx/2009/dimension>, <http://qudt.org/1.1/schema/qudt>, <http://transparency.270a.info/property/>, <http://www.w3.org/1999/02/22-rdf-syntax-ns>, <http://www.w3.org/2000/01/rdf-schema> ;
     .
 
@@ -485,13 +490,13 @@
         a sd:Dataset;
         dcterms:title "Transparency International Linked Data"@en ;
         dcterms:description "Transparency International Linked Data"@en ;
-        void:triples 41429 ;
+        void:triples 42044 ;
 
         sd:defaultGraph [
             a sd:Graph, void:Dataset ;
             dcterms:title "Transparency International Linked Data SPARQL Endpoint Description"@en ;
             dcterms:description "Contains a copy of this SD+VoID file!"@en ;
-            void:triples 41429 ;
+            void:triples 42044 ;
         ] ;
         sd:namedGraph [
             sd:name tild-graph:void ;
