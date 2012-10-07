@@ -33,7 +33,7 @@
         :VoID ,
         :meta ,
         :corruption-perceptions-index ;
-    void:triples 41894 ;
+    void:triples 41893 ;
     dcterms:subject
         <http://dbpedia.org/resource/Transparency_International> ,
         <http://dbpedia.org/resource/Non-governmental_organization> ,
@@ -208,7 +208,7 @@
         void:distinctObjects 9 ;
         void:distinctSubjects 266 ;
         void:property rdf:type ;
-        void:triples 247
+        void:triples 255
     ], [
         void:distinctObjects 17 ;
         void:distinctSubjects 17 ;
@@ -245,10 +245,10 @@
         void:property <http://purl.org/dc/terms/subject> ;
         void:triples 7
     ], [
-        void:distinctObjects 8 ;
+        void:distinctObjects 7 ;
         void:distinctSubjects 5 ;
         void:property <http://purl.org/dc/terms/hasPart> ;
-        void:triples 8
+        void:triples 7
     ], [
         void:distinctObjects 2 ;
         void:distinctSubjects 2 ;
@@ -310,7 +310,7 @@
         void:property <http://www.w3.org/2002/07/owl#sameAs> ;
         void:triples 731
     ] ;
-    void:triples 2918 ;
+    void:triples 2917 ;
     void:vocabulary <http://purl.org/dc/terms/>, <http://purl.org/linked-data/cube>, <http://www.w3.org/1999/02/22-rdf-syntax-ns>, <http://www.w3.org/2000/01/rdf-schema>, <http://www.w3.org/2002/07/owl>, <http://www.w3.org/2004/02/skos/core>, <http://xmlns.com/foaf/0.1/> ;
     .
 
@@ -493,13 +493,13 @@
         a sd:Dataset;
         dcterms:title "Transparency International Linked Data"@en ;
         dcterms:description "Transparency International Linked Data"@en ;
-        void:triples 41894 ;
+        void:triples 41893 ;
 
         sd:defaultGraph [
             a sd:Graph, void:Dataset ;
             dcterms:title "Transparency International Linked Data SPARQL Endpoint Description"@en ;
             dcterms:description "Contains a copy of this SD+VoID file!"@en ;
-            void:triples 41894 ;
+            void:triples 41893 ;
         ] ;
         sd:namedGraph [
             sd:name tild-graph:void ;
