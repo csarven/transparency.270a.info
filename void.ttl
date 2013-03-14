@@ -9,18 +9,20 @@
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 @prefix xstats: <http://example.org/XStats#> .
 @prefix : <http://transparency.270a.info/void.ttl#> .
-@prefix tild-dataset: <http://transparency.270a.info/dataset/> .
-@prefix tild-graph: <http://transparency.270a.info/graph/> .
+@prefix transparency-dataset: <http://transparency.270a.info/dataset/> .
+@prefix transparency-graph: <http://transparency.270a.info/graph/> .
+@prefix worldbank-dataset: <http://worldbank.270a.info/dataset/> .
+@prefix transparency-dataset: <http://transparency.270a.info/dataset/> .
 
 
 <http://transparency.270a.info/void.ttl>
     a void:DatasetDescription ;
     dcterms:title "A VoiD Description of the transparency.270a.info Dataset"@en ;
     dcterms:creator <http://csarven.ca/#i> ;
-    foaf:primaryTopic :transparency-international .
+    foaf:primaryTopic transparency-dataset:transparency-international .
 
 
-:transparency-international
+transparency-dataset:transparency-international
     a void:Dataset ;
     foaf:homepage <http://transparency.270a.info/> ;
     dcterms:title "Transparency International Linked Data"@en ;
@@ -30,9 +32,9 @@
     dcterms:created "2012-09-24T00:00:00Z"^^xsd:dateTime ;
     dcterms:modified "2012-10-07T00:00:00Z"^^xsd:dateTime ;
     void:subset
-        :VoID ,
-        :meta ,
-        :corruption-perceptions-index ;
+        transparency-dataset:void ,
+        transparency-dataset:meta ,
+        transparency-dataset:corruption-perceptions-index ;
     void:triples 41893 ;
     dcterms:subject
         <http://dbpedia.org/resource/Transparency_International> ,
@@ -56,7 +58,7 @@
     .
 
 
-:VoID
+transparency-dataset:void
     a sd:Graph, void:Dataset ;
     dcterms:title "SD+VoID triples"@en ;
     void:triples 463 ;
@@ -64,7 +66,7 @@
     .
 
 
-:meta
+transparency-dataset:meta
     a sd:Graph, void:Dataset ;
     dcterms:title "Metadata and complimentary data used for all the data in the :transparency-international dataset"@en ;
     dcterms:source [ foaf:homepage <http://cpi.transparency.org/> ] ;
@@ -314,7 +316,7 @@
     void:vocabulary <http://purl.org/dc/terms/>, <http://purl.org/linked-data/cube>, <http://www.w3.org/1999/02/22-rdf-syntax-ns>, <http://www.w3.org/2000/01/rdf-schema>, <http://www.w3.org/2002/07/owl>, <http://www.w3.org/2004/02/skos/core>, <http://xmlns.com/foaf/0.1/> ;
     .
 
-:corruption-perceptions-index
+transparency-dataset:corruption-perceptions-index
     a sd:Graph, void:Dataset ;
     dcterms:title "Corruption Perceptions Index dataset"@en ;
     dcterms:source [ foaf:homepage <http://cpi.transparency.org/> ] ;
@@ -429,42 +431,42 @@
     .
 
 
-:meta_dbpedia
+:linkset-transparency-dbpedia
     a void:Linkset ;
     void:linkPredicate owl:sameAs ;
-    void:subjectsTarget :meta ;
-    void:objectsTarget :dbpedia ;
+    void:subjectsTarget transparency-dataset:transparency ;
+    void:objectsTarget <http://dbpedia.org/void/Dataset> ;
     void:triples 183 ;
     .
 
-:meta_worldbank
+:linkset-transparency-worldbank
     a void:Linkset ;
     void:linkPredicate owl:sameAs ;
-    void:subjectsTarget :meta ;
-    void:objectsTarget :worldbank ;
+    void:subjectsTarget transparency-dataset:transparency ;
+    void:objectsTarget worldbank-dataset:worldbank ;
     void:triples 182 ;
     .
 
-:meta_eurostat
+:linkset-transparency-eurostat
     a void:Linkset ;
     void:linkPredicate owl:sameAs ;
-    void:subjectsTarget :meta ;
+    void:subjectsTarget transparency-dataset:transparency ;
     void:objectsTarget :eurostat ;
     void:triples 183 ;
     .
 
-:meta_geonames
+:linkset-transparency-geonames
     a void:Linkset ;
     void:linkPredicate owl:sameAs ;
-    void:subjectsTarget :meta ;
+    void:subjectsTarget transparency-dataset:transparency ;
     void:objectsTarget :geonames ;
     void:triples 183 ;
     .
 
-:dbpedia
+<http://dbpedia.org/void/Dataset>
     rdf:type void:Dataset ;
-    foaf:homepage <http://dbpedia.org/> ;
     void:sparqlEndpoint <http://dbpedia.org/sparql> ;
+    foaf:homepage <http://dbpedia.org/> ;
     .
 
 :eurostat
@@ -473,10 +475,10 @@
     void:sparqlEndpoint <http://eurostat.linked-statistics.org/sparql> ;
     .
 
-:worldbank
+worldbank-dataset:worldbank
     rdf:type void:Dataset ;
-    foaf:homepage <http://worldbank.270a.info/> ;
     void:sparqlEndpoint <http://worldbank.270a.info/sparql> ;
+    foaf:homepage <http://worldbank.270a.info/> ;
     .
 
 :geonames
@@ -502,16 +504,16 @@
             void:triples 41893 ;
         ] ;
         sd:namedGraph [
-            sd:name tild-graph:void ;
-            sd:graph :VoID ;
+            sd:name transparency-graph:void ;
+            sd:graph transparency-dataset:void ;
         ] ;
         sd:namedGraph [
-            sd:name tild-graph:meta ;
-            sd:graph :meta ;
+            sd:name transparency-graph:meta ;
+            sd:graph transparency-dataset:meta ;
         ] ;
         sd:namedGraph [
-            sd:name tild-graph:corruption-perceptions-index ;
-            sd:graph :corruption-perceptions-index ;
+            sd:name transparency-graph:corruption-perceptions-index ;
+            sd:graph transparency-dataset:corruption-perceptions-index ;
         ] ;
     ] ;
     .
