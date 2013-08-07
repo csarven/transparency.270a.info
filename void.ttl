@@ -7,12 +7,16 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix qb: <http://purl.org/linked-data/cube> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xstats: <http://example.org/XStats#> .
 @prefix : <http://transparency.270a.info/void.ttl#> .
 @prefix transparency-dataset: <http://transparency.270a.info/dataset/> .
 @prefix transparency-graph: <http://transparency.270a.info/graph/> .
 @prefix worldbank-dataset: <http://worldbank.270a.info/dataset/> .
 @prefix transparency-dataset: <http://transparency.270a.info/dataset/> .
+@prefix ecb-dataset: <http://ecb.270a.info/dataset/> .
+@prefix imf-dataset: <http://imf.270a.info/dataset/> .
+@prefix fao-dataset: <http://fao.270a.info/dataset/> .
 
 
 <http://transparency.270a.info/void.ttl>
@@ -447,6 +451,30 @@ transparency-dataset:corruption-perceptions-index
     void:triples 182 ;
     .
 
+:linkset-transparency-ecb
+    a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:subjectsTarget transparency-dataset:transparency ;
+    void:objectsTarget ecb-dataset:ecb ;
+    void:triples 182 ;
+    .
+
+:linkset-transparency-imf
+    a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:subjectsTarget transparency-dataset:transparency ;
+    void:objectsTarget imf-dataset:imf ;
+    void:triples 182 ;
+    .
+
+:linkset-transparency-fao
+    a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:subjectsTarget transparency-dataset:transparency ;
+    void:objectsTarget fao-dataset:fao ;
+    void:triples 182 ;
+    .
+
 :linkset-transparency-eurostat
     a void:Linkset ;
     void:linkPredicate owl:sameAs ;
@@ -479,6 +507,24 @@ worldbank-dataset:worldbank
     rdf:type void:Dataset ;
     void:sparqlEndpoint <http://worldbank.270a.info/sparql> ;
     foaf:homepage <http://worldbank.270a.info/> ;
+    .
+
+ecb-dataset:ecb
+    rdf:type void:Dataset ;
+    void:sparqlEndpoint <http://ecb.270a.info/sparql> ;
+    foaf:homepage <http://ecb.270a.info/> ;
+    .
+
+imf-dataset:imf
+    rdf:type void:Dataset ;
+    void:sparqlEndpoint <http://imf.270a.info/sparql> ;
+    foaf:homepage <http://imf.270a.info/> ;
+    .
+
+fao-dataset:fao
+    rdf:type void:Dataset ;
+    void:sparqlEndpoint <http://fao.270a.info/sparql> ;
+    foaf:homepage <http://fao.270a.info/> ;
     .
 
 :geonames
