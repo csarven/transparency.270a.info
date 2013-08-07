@@ -456,7 +456,7 @@ transparency-dataset:corruption-perceptions-index
     void:linkPredicate skos:exactMatch ;
     void:subjectsTarget transparency-dataset:transparency ;
     void:objectsTarget ecb-dataset:ecb ;
-    void:triples 182 ;
+    void:triples 167 ;
     .
 
 :linkset-transparency-imf
@@ -464,7 +464,7 @@ transparency-dataset:corruption-perceptions-index
     void:linkPredicate skos:exactMatch ;
     void:subjectsTarget transparency-dataset:transparency ;
     void:objectsTarget imf-dataset:imf ;
-    void:triples 182 ;
+    void:triples 23 ;
     .
 
 :linkset-transparency-fao
@@ -472,7 +472,7 @@ transparency-dataset:corruption-perceptions-index
     void:linkPredicate skos:exactMatch ;
     void:subjectsTarget transparency-dataset:transparency ;
     void:objectsTarget fao-dataset:fao ;
-    void:triples 182 ;
+    void:triples 167 ;
     .
 
 :linkset-transparency-eurostat
