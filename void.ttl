@@ -17,6 +17,7 @@
 @prefix ecb-dataset: <http://ecb.270a.info/dataset/> .
 @prefix imf-dataset: <http://imf.270a.info/dataset/> .
 @prefix fao-dataset: <http://fao.270a.info/dataset/> .
+@prefix bfs-dataset: <http://bfs.270a.info/dataset/> .
 
 
 <http://transparency.270a.info/void.ttl>
