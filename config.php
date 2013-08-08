@@ -95,31 +95,14 @@ WHERE {
     GRAPH <http://transparency.270a.info/graph/meta> {
         <URI> ?p1 ?o1 .
         OPTIONAL {
-            {
-                ?p1 skos:prefLabel ?propertyLabel .
-            }
+            { ?p1 skos:prefLabel ?propertyLabel . }
             UNION
-            {
-                ?p1 rdfs:label ?propertyLabel .
-            }
+            { ?p1 rdfs:label ?propertyLabel . }
         }
-        OPTIONAL {
-            {
-                ?o1 skos:prefLabel ?conceptLabel .
-            }
-            UNION
-            {
-                ?o1 rdfs:label ?resourceLabel .
-            }
-            UNION
-            {
-                ?o1 dcterms:title ?resourceTitle .
-            }
-            UNION
-            {
-                ?o1 skos:notation ?conceptNotation .
-            }
-        }
+        OPTIONAL { ?o1 skos:prefLabel ?conceptLabel . }
+        OPTIONAL { ?o1 rdfs:label ?resourceLabel . }
+        OPTIONAL { ?o1 dcterms:title ?resourceTitle . }
+        OPTIONAL { ?o1 skos:notation ?conceptNotation . }
     }
 }
 
@@ -145,28 +128,11 @@ CONSTRUCT {
 }
 WHERE {
     <URI> ?p1 ?o1 .
-    OPTIONAL {
-        {
-            ?p1 skos:prefLabel ?propertyLabel .
-        }
-        UNION
-        {
-            ?p1 rdfs:label ?resourceLabel .
-        }
-    }
-    OPTIONAL {
-        {
-            ?o1 skos:prefLabel ?conceptLabel .
-        }
-        UNION
-        {
-            ?o1 dcterms:title ?title .
-        }
-        UNION
-        {
-            ?o1 rdfs:label ?resourceSchemaLabel .
-        }
-    }
+    OPTIONAL { ?p1 skos:prefLabel ?propertyLabel . }
+    OPTIONAL { ?p1 rdfs:label ?resourceLabel . }
+    OPTIONAL { ?o1 skos:prefLabel ?conceptLabel . }
+    OPTIONAL { ?o1 dcterms:title ?title . }
+    OPTIONAL { ?o1 rdfs:label ?resourceSchemaLabel . }
 }
 ";
 $config['entity']['dataset']['path']     = '/dataset';
