@@ -35,12 +35,12 @@ transparency-dataset:transparency-international
     dcterms:source [ foaf:homepage <http://transparency.org/> ] ;
     dcterms:publisher [ foaf:homepage <http://csarven.ca/> ] ;
     dcterms:created "2012-09-24T00:00:00Z"^^xsd:dateTime ;
-    dcterms:modified "2012-10-07T00:00:00Z"^^xsd:dateTime ;
+    dcterms:modified "2013-10-13T00:00:00Z"^^xsd:dateTime ;
     void:subset
         transparency-dataset:void ,
         transparency-dataset:meta ,
         transparency-dataset:corruption-perceptions-index ;
-    void:triples 41893 ;
+    void:triples 51397 ;
     dcterms:subject
         <http://dbpedia.org/resource/Transparency_International> ,
         <http://dbpedia.org/resource/Non-governmental_organization> ,
@@ -66,7 +66,7 @@ transparency-dataset:transparency-international
 transparency-dataset:void
     a sd:Graph, void:Dataset ;
     dcterms:title "SD+VoID triples"@en ;
-    void:triples 463 ;
+    void:triples 503 ;
     void:dataDump <http://transparency.270a.info/void.ttl> ;
     .
 
@@ -492,6 +492,23 @@ transparency-dataset:corruption-perceptions-index
     void:triples 183 ;
     .
 
+:linkset-transparency-hr
+    a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:subjectsTarget transparency-dataset:transparency ;
+    void:objectsTarget :hr ;
+    void:triples 182 ;
+    .
+
+:linkset-transparency-iati
+    a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:subjectsTarget transparency-dataset:transparency ;
+    void:objectsTarget :iati ;
+    void:triples 163 ;
+    .
+
+
 <http://dbpedia.org/void/Dataset>
     rdf:type void:Dataset ;
     void:sparqlEndpoint <http://dbpedia.org/sparql> ;
@@ -533,6 +550,19 @@ fao-dataset:fao
     foaf:homepage <http://geonames.org/> ;
     .
 
+:hr
+    rdf:type void:Dataset ;
+    void:sparqlEndpoint <http://hxl.humanitarianresponse.info/sparql> ;
+    foaf:homepage <http://hxl.humanitarianresponse.info/> ;
+    .
+
+:iati
+    rdf:type void:Dataset ;
+    void:sparqlEndpoint <http://eculture.cs.vu.nl:1987/iati/sparql> ;
+    foaf:homepage <http://eculture.cs.vu.nl:1987/iati/> ;
+    .
+
+
 :service
     a sd:Service ;
     sd:endpoint <http://transparency.270a.info/sparql> ;
@@ -542,13 +572,13 @@ fao-dataset:fao
         a sd:Dataset;
         dcterms:title "Transparency International Linked Data"@en ;
         dcterms:description "Transparency International Linked Data"@en ;
-        void:triples 41893 ;
+        void:triples 51397 ;
 
         sd:defaultGraph [
             a sd:Graph, void:Dataset ;
             dcterms:title "Transparency International Linked Data SPARQL Endpoint Description"@en ;
             dcterms:description "Contains a copy of this SD+VoID file!"@en ;
-            void:triples 41893 ;
+            void:triples 51397 ;
         ] ;
         sd:namedGraph [
             sd:name transparency-graph:void ;
