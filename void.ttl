@@ -10,14 +10,16 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xstats: <http://example.org/XStats#> .
 @prefix : <http://transparency.270a.info/void.ttl#> .
-@prefix transparency-dataset: <http://transparency.270a.info/dataset/> .
 @prefix transparency-graph: <http://transparency.270a.info/graph/> .
-@prefix worldbank-dataset: <http://worldbank.270a.info/dataset/> .
-@prefix transparency-dataset: <http://transparency.270a.info/dataset/> .
+@prefix oecd-dataset: <http://oecd.270a.info/dataset/> .
+@prefix bfs-dataset: <http://bfs.270a.info/dataset/> .
+@prefix fao-dataset: <http://fao.270a.info/dataset/> .
 @prefix ecb-dataset: <http://ecb.270a.info/dataset/> .
 @prefix imf-dataset: <http://imf.270a.info/dataset/> .
-@prefix fao-dataset: <http://fao.270a.info/dataset/> .
-@prefix bfs-dataset: <http://bfs.270a.info/dataset/> .
+@prefix uis-dataset: <http://uis.270a.info/dataset/> .
+@prefix frb-dataset: <http://frb.270a.info/dataset/> .
+@prefix worldbank-dataset: <http://worldbank.270a.info/dataset/> .
+@prefix transparency-dataset: <http://transparency.270a.info/dataset/> .
 
 
 <http://transparency.270a.info/void.ttl>
@@ -480,7 +482,7 @@ transparency-dataset:corruption-perceptions-index
     a void:Linkset ;
     void:linkPredicate owl:sameAs ;
     void:subjectsTarget transparency-dataset:transparency ;
-    void:objectsTarget :eurostat ;
+    void:objectsTarget <http://eurostat.linked-statistics.org/void.ttl#eurostat> ;
     void:triples 183 ;
     .
 
@@ -492,33 +494,20 @@ transparency-dataset:corruption-perceptions-index
     void:triples 183 ;
     .
 
-:linkset-transparency-hr
-    a void:Linkset ;
-    void:linkPredicate skos:exactMatch ;
-    void:subjectsTarget transparency-dataset:transparency ;
-    void:objectsTarget :hr ;
-    void:triples 182 ;
-    .
-
 :linkset-transparency-iati
     a void:Linkset ;
     void:linkPredicate skos:exactMatch ;
     void:subjectsTarget transparency-dataset:transparency ;
-    void:objectsTarget :iati ;
+    void:objectsTarget <http://purl.org/collections/iati/void.ttl#IATI> ;
     void:triples 163 ;
     .
 
-
-<http://dbpedia.org/void/Dataset>
-    rdf:type void:Dataset ;
-    void:sparqlEndpoint <http://dbpedia.org/sparql> ;
-    foaf:homepage <http://dbpedia.org/> ;
-    .
-
-:eurostat
-    rdf:type void:Dataset ;
-    foaf:homepage <http://eurostat.linked-statistics.org/> ;
-    void:sparqlEndpoint <http://eurostat.linked-statistics.org/sparql> ;
+:linkset-transparency-hr
+    a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:subjectsTarget transparency-dataset:transparency ;
+    void:objectsTarget <http://hxl.humanitarianresponse.info/> ;
+    void:triples 182 ;
     .
 
 worldbank-dataset:worldbank
@@ -545,21 +534,42 @@ fao-dataset:fao
     foaf:homepage <http://fao.270a.info/> ;
     .
 
-:geonames
+<http://dbpedia.org/void/Dataset>
     rdf:type void:Dataset ;
-    foaf:homepage <http://geonames.org/> ;
+    dcterms:title "DBpedia"@en ;
+    #TODO: What's the count?
+    void:sparqlEndpoint <http://dbpedia.org/sparql> ;
+    foaf:homepage <http://dbpedia.org/> ;
     .
-
-:hr
+#TODO: What's the real VoID URL?
+<http://sws.geonames.org/>
     rdf:type void:Dataset ;
+    dcterms:title "Geonames"@en ;
+    #TODO: What's the count?
+    foaf:homepage <http://sws.geonames.org/> ;
+    .
+<http://eurostat.linked-statistics.org/void.ttl#eurostat>
+    rdf:type void:Dataset ;
+    dcterms:title "Eurostat"@en ;
+    void:sparqlEndpoint <http://eurostat.linked-statistics.org/sparql> ;
+    #TODO: What's the count?
+    foaf:homepage <http://eurostat.linked-statistics.org/> ;
+    .
+#TODO: What's the real VoID URL?
+<http://purl.org/collections/iati/void.ttl#IATI>
+    rdf:type void:Dataset ;
+    dcterms:title "International Aid Transparency Initiative"@en ;
+    void:sparqlEndpoint <http://semanticweb.cs.vu.nl/iati/user/query> ;
+    #TODO: What's the count?
+    foaf:homepage <http://semanticweb.cs.vu.nl/iati/home> ;
+    .
+#TODO: What's the real VoID URL?
+<http://hxl.humanitarianresponse.info/>
+    rdf:type void:Dataset ;
+    dcterms:title "Humanitarian Response"@en ;
     void:sparqlEndpoint <http://hxl.humanitarianresponse.info/sparql> ;
+    #TODO: What's the count?
     foaf:homepage <http://hxl.humanitarianresponse.info/> ;
-    .
-
-:iati
-    rdf:type void:Dataset ;
-    void:sparqlEndpoint <http://eculture.cs.vu.nl:1987/iati/sparql> ;
-    foaf:homepage <http://eculture.cs.vu.nl:1987/iati/> ;
     .
 
 
