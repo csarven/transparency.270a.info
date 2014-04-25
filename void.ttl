@@ -21,21 +21,28 @@
 @prefix worldbank-dataset: <http://worldbank.270a.info/dataset/> .
 @prefix transparency-dataset: <http://transparency.270a.info/dataset/> .
 
+<http://csarven.ca/#i>
+    rdfs:label "Sarven Capadisli"@en ;
+    .
+
+<http://creativecommons.org/publicdomain/zero/1.0/>
+    rdfs:label "CC0 1.0 Universal"@en ;
+    .
 
 <http://transparency.270a.info/void.ttl>
     a void:DatasetDescription ;
     dcterms:title "A VoiD Description of the transparency.270a.info Dataset"@en ;
     dcterms:creator <http://csarven.ca/#i> ;
-    foaf:primaryTopic transparency-dataset:transparency-international .
+    foaf:primaryTopic transparency-dataset:transparency .
 
 
-transparency-dataset:transparency-international
+transparency-dataset:transparency
     a void:Dataset ;
     foaf:homepage <http://transparency.270a.info/> ;
     dcterms:title "Transparency International Linked Data"@en ;
     dcterms:description "Transparency International's Corruption Perceptions Index"@en ;
     dcterms:source [ foaf:homepage <http://transparency.org/> ] ;
-    dcterms:publisher [ foaf:homepage <http://csarven.ca/> ] ;
+    dcterms:publisher <http://csarven.ca/#i> ;
     dcterms:created "2012-09-24T00:00:00Z"^^xsd:dateTime ;
     dcterms:modified "2013-10-13T00:00:00Z"^^xsd:dateTime ;
     void:subset
@@ -75,9 +82,9 @@ transparency-dataset:void
 
 transparency-dataset:meta
     a sd:Graph, void:Dataset ;
-    dcterms:title "Metadata and complimentary data used for all the data in the :transparency-international dataset"@en ;
+    dcterms:title "Metadata and complimentary data used for all the data in the :transparency dataset"@en ;
     dcterms:source [ foaf:homepage <http://cpi.transparency.org/> ] ;
-    dcterms:publisher [ foaf:homepage <http://csarven.ca/> ] ;
+    dcterms:publisher <http://csarven.ca/#i> ;
     dcterms:created "2012-09-24T00:00:00Z"^^xsd:dateTime ;
     dcterms:modified "2012-10-07T00:00:00Z"^^xsd:dateTime ;
     void:dataDump <http://transparency.270a.info/data/meta.tar.gz> ;
@@ -327,7 +334,7 @@ transparency-dataset:corruption-perceptions-index
     a sd:Graph, void:Dataset ;
     dcterms:title "Corruption Perceptions Index dataset"@en ;
     dcterms:source [ foaf:homepage <http://cpi.transparency.org/> ] ;
-    dcterms:publisher [ foaf:homepage <http://csarven.ca/> ] ;
+    dcterms:publisher <http://csarven.ca/#i> ;
     dcterms:created "2012-09-24T00:00:00Z"^^xsd:dateTime ;
     dcterms:modified "2012-10-07T00:00:00Z"^^xsd:dateTime ;
     void:dataDump <http://transparency.270a.info/data/corruption-perceptions-index.tar.gz> ;
